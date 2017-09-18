@@ -1,0 +1,7 @@
+you go http://10.11.200.246/?page=media&src=nsa
+you see src=[param]
+you see that you don't get warning with strnge char
+you got your LFI
+ google lfi exploit
+ try smth
+ you got flag
