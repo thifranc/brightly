@@ -1,4 +1,4 @@
-from http://10.11.200.246/
+from: http://10.11.200.246/
 
 You want to know what stored by the site, like you nerver know you know
 You see in cookies:
@@ -11,4 +11,3 @@ You steal admin cookie so you can get his access privileges on the site
 
 How to prevent this:
 You need to obfuscate what you store client-side, why not by crypting your data ?
-

@@ -1,3 +1,5 @@
+from: http://10.11.200.245/?page=upload
+
 Go to File Upload, then try to upload a php file. You will see an error telling that your image si not uploaded. Go to the console and select the network tab. You will see that a request named "?page=upload" has been sent. Copy this request as Curl and past it into your term, change the line Content-Type to "image/jpeg". It will fake the server telling it that your file is an image.
 
 How to fix it:

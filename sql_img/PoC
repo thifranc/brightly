@@ -1,4 +1,4 @@
-http://10.11.200.245/?page=searchimg&id=1+union+select+comment%2C+title+from+list_images&Submit=Submit#
+from: http://10.11.200.245/?page=searchimg&id=1+union+select+comment%2C+title+from+list_images&Submit=Submit#
 
 While searching table and column in the search member field you saw the list_images table.
 This table conntain columns like:
@@ -11,4 +11,3 @@ But if you try to access to this table an error occured because it's not the goo
 How to prevent it ?
 in many languages functions to prevent sql injection exist. For exemple in php you can use the mysql_real_escape_string() function.
 it will escape characters like: NULL, \n, \r , ',' and other.
-
