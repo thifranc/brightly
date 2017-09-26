@@ -5,3 +5,10 @@ You look networks on Inspector
 You curl and change param
 
 You got flag
+
+When you go to the survey page you can note Subjects by selecting a value in the dropdown. The range of value is between 1 and 9.
+But we can change it by doint a curl request. If you inspect the page you will see that there is a onChange request. Go to network and copy the request as curl
+Change the value and put a number above 9. The server accepted the request without checking the value of value. You got the flag.
+
+How to fix it?:
+You need to check if the value is between 1 and 9.

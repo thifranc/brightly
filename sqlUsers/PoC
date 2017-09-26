@@ -1,5 +1,22 @@
 http://10.11.200.246/index.php?page=member&id=1+union+select+first_name%2C+countersign+from+users&Submit=Submit#
 
-you got 5ff9d0165b4f92b14994e5c685cdce28
-you see commentaire you do shit
-you got flag
+When you try to type something in the input an SQL error appears. Now we know that we can put SQl here and make an SQL injection.
+Search How to show tables with an SQl Injection in google to have the right sql line.
+You will find something like this: 1 UNION SELECT table_name, 1 FROM information_schema.tables
+It shows all the tables, and when you scroll down, at the bottom of the page you see the table user.
+Now that you have the table you want to know what columns this table have so you put an other SQL to find the columns.
+1 union SELECT COLUMN_NAME,TABLE_NAME FROM INFORMATION_SCHEMA.COLUMNS
+You see that users have multiple columns, but for this just three are important.
+- countersign
+- first_name
+- commentaire
+
+first print first_name and counter sign
+1 union select first_name, countersign from users
+
+now as you can see a First name named Flag have for surname a flag. But it's not finish if you replace countersign by commentaire you will see the steps that you need to follow to convert this flag into a real flag.
+
+How to prevent it ?:
+
+in many languages functions to prevent sql injection exist. For exemple in php you can use the mysql_real_escape_string() function.
+it will escape characters like: NULL, \n, \r , ',' and other.

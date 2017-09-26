@@ -1,10 +1,11 @@
-You see robots.txt
+When you try to reach robots.txt page you can see that two path are Disallowed to robots: /whatever and /.hidden.
+If you go to the whatever page you'll see that there is a htpasswd. This is a file who store password. There is a Username and a Password but the password is hashed
+by making a quick research you will see that the password is hash in MD5. One of the most known function for hash, there is a lot of website who can decrypt md5 hashed password. If you use one of them you will find that the password is Dragon. So now we have a Username and Password. "root: dragon". Now where do I use them ?
+You know that those credentials are available to access restricted areas
+You want to try different common restricted areas
+you know /root /admin /passwd etc
+By searching a little bit you will find an admin page and if you use the previous username and password you will find a flag.
 
-You go to whatever
-You click
-You get flag
-You decrypt md5-> you get dragon
-Hey, decrypt md5 reminds you of username flag
-You sha256 dragon all lowercase
-You got flag
+How to fix it ?:
+Robots.txt is a file who prevent the robot from not visiting pages, but all the robots are not going to follow the rules so you need to care what file you put in the robots.txt, also if you put some important files protect them with a Login form, and use a strong hash not md5 or sha256 who can be decrypted really easily.
 

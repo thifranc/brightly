@@ -1,7 +1,4 @@
-You get robots.txt
-You see hidden directory
-You see many directories
-Too many directories
-Really too many directories
-You do script
-You get flag
+In the robots.txt you have a path named /.readme (To understand what the robots.txt is go to the PoC of the whatever flag).
+Now you can see that there is a lot of links each link redirect to a link who contains the same numbers of links who redirect to the same number of links who are readme. A lot of readme are just trolling sentences. So there is a lot of links with maybe one readme with a flag, and you don't want to check them one by one, so you need to do a script (refer to the script) who will browse all the directories and download all the readme, if you grep the word "flag" then you stop your script and print the readme.
+How to fix it ?:
+Check whatever flag it's the same solution.

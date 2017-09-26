@@ -1,7 +1,29 @@
-you go http://10.11.200.246/?page=media&src=nsa
-you see src=[param]
-you see that you don't get warning with strnge char
-you got your LFI
- google lfi exploit
- try smth
- you got flag
+from  http://10.11.200.246/?page=media&src=nsa
+
+you see src=[param], hmmm that looks interesting
+
+you start by trying strange chars, lucky you, they aren't sanitized !
+
+you understand that you got an LFI (Local File Inclusion)
+
+Surely, the website behind does smthg like fopen($GET['src']) (in more complex, as the file included is not directly the name of the file :
+for example : nsa leads to -> nsa_prism.jpg)
+
+You start to look for docs -> google "LFI php exploit"
+You get this doc : https://blog.clever-age.com/fr/2014/10/21/owasp-local-remote-file-inclusion-lfi-rfi/
+
+Bad news, many are file path to guess
+Good news, one seems to allow code executions : with data wrapper
+
+You go to doc : http://php.net/manual/fr/wrappers.data.php
+
+You start to see you can pass html formatted data
+You send it with a <script> inside
+
+You got flag
+
+Possible exploit :
+You can forge url with any JS script inside, allowing cookie steal for example
+
+How to prevent this :
+test that path you give to fopen are path you have on your server

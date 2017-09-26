@@ -1,7 +1,20 @@
 from http://10.11.200.246/?page=e43ad1fdc54babe674da7c7b8f0127bde61de3fbe01def7d00f151c2fcca6d1c
+
 you see that must be coming from https://www.nsa.gov/
-and that brower should be ft_bornToSec
+and that browser should be ft_bornToSec
 
 -> you curl and use -H Referer + User-Agent
 
 You got Flag
+
+Possible exploit:
+That is more to prevent the fact that some headers can be changed and your website should test them, for example HTTP verb tampering can be a type of attack where you change your HTTP verb and the website lets you in.
+
+for example if and htaccess file looks like this :
+		<Limit GET>
+		Deny from all
+		</Limit>
+You can bypass this restriction by faking your HTTP verb
+
+How to prevent this :
+Be aware of it and be a decent coder 😉
