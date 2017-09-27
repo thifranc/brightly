@@ -4,7 +4,14 @@ You want to know what stored by the site, like you never know you know
 You see in cookies:
 I_am_admin
 
-You got flag
+You got some string
+Hmmm, looks like and MD5 to me, let's try and decrypt it :
+	Md5(false) = 68934a3e9455fa72420237eb05902327
+Yes ! it says "false"
+You encrypt true in MD5 and set your cookie to this value :
+	Md5(true) = b326b5062b2f0e69046810717534cb09
+
+You got flag :)
 
 Possible exploit :
 You steal admin cookie so you can get his access privileges on the site
