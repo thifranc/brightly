@@ -1,3 +1,14 @@
-You comment and insert HTML code
+from: http://192.168.1.15/?page=feedback
 
-You got XSS and flag
+As you can see in the title you can only put 10 characters max.
+You can bypass it by using a curl command, so first just inspect the page and go to network. Leave a feedback,
+as you noticed there is a request called ?page=feedback. Copy it as curl and now in the title value you can put
+whatever you want. Try something like <script>alert("darkly")</script>.
+And now you got your flag.
+
+How to fix it ?
+
+You can easily fix it, you just need to escape the value received.
+( for exemple the function filter_var() in PHP )
+And instead of just putting characters max to 10, In the code crop the string and
+keep the 10 first characters.

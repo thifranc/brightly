@@ -1,7 +1,8 @@
+from: http://10.11.200.245/?page=recover
+
 If you go to the recover password page and inspect it you will see a mail.
 You can now easily change the mail adress and put yours.
 Why is it a problem ?:
 The website don't check your identity so for exemple if the website juste ask for the login I can easily pretend to be a random user and get his password.
-How to fix it?: 
+How to fix it?:
 Dont put the mail adress in the html.
-

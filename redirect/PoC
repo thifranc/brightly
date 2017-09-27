@@ -1,3 +1,5 @@
+from: http://10.11.200.245/
+
 When you go to the footer you can see three social media links.
 These links send you to a redirect page, for exemple:
 "index.php?page=redirect&amp;site=instagram"
