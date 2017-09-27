@@ -1,6 +1,6 @@
 from: http://10.11.200.245/?page=
 
-If yoou go to a random page like for exemple survey. You will see that the url contain "?page=survey".
+If you go to a random page like for exemple survey. You will see that the url contain "?page=survey".
 Explenation of what a path traversal is:  "A path traversal attack (also known as directory traversal) aims to access files and directories that are stored outside the web root folder."
 So now we will try it and put ../ instead of survey you will see that a pop up appears and says wtf? continue until the pop updon't change his message anymore and says "You can do it!". Now we will try to access a well known file stored in etc/passwd.
 It's done, you got your flag.
