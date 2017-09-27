@@ -10,5 +10,4 @@ How to fix it ?
 
 You can easily fix it, you just need to escape the value received.
 ( for exemple the function filter_var() in PHP )
-And instead of just putting characters max to 10, In the code crop the string and
-keep the 10 first characters.
+And instead of just putting characters max to 10, check it on the backside

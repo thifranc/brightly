@@ -2,7 +2,12 @@ from: http://10.11.200.245/?page=signin
 
 When you search in the sql db you will find member_brute_force. So you can deducte that you will need to brutforce the login page.
 To brutforce a password you need to try the most used password.They are multiple files in internet who regroup them, one of the most famous is rockyou.txt.
+
+Here is your password dictionnary :
+	http://scrapmaker.com/download/data/wordlists/dictionaries/rockyou.txt.bz2
+
 The login method is in GET so you can juste make a script who will make a lot of request trying the password one by one.
+
 We decided to try two username for the login, the first one was root, because we found it in the htpaswd and the other one was admin, because we had a cookie named i_am_admin.
 
 How to fix it:
