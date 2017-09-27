@@ -3,7 +3,7 @@ from: http://192.168.1.15/?page=feedback
 As you can see in the title you can only put 10 characters max.
 You can bypass it by using a curl command, so first just inspect the page and go to network. Leave a feedback,
 as you noticed there is a request called ?page=feedback. Copy it as curl and now in the title value you can put
-whatever you want. Try something like <script>alert("darkly")</script>.
+whatever you want. Try something like <script>alert
 And now you got your flag.
 
 How to fix it ?
